@@ -18,4 +18,9 @@ for (country, capital) in countryCapital {
     print("Capital of \(country) is \(capital)")
 }
 
+var trainings = ["Кардио-тренировки", "Йога", "Силовые тренировки"]
+
+for training in trainings {
+    print(training)
+}
 
