@@ -24,3 +24,22 @@ for training in trainings {
     print(training)
 }
 
+// Задание 5
+var balance = 0
+
+balance += 10000
+print(balance)
+
+balance += 20000
+print(balance)
+
+balance /= 2
+print(balance)
+
+balance *= 3
+print(balance)
+
+balance -= 3000
+print(balance)
+
+
