@@ -1,45 +1,73 @@
 // Задание 1
-// 1.1
-for index in 1...100 {
-    print(index)
-}
- 
-// 1.2
-var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-for (i, letter) in alphabet.enumerated() {
-    print("\(i): \(letter)")
-}
 
-//1.3
-var countryCapital: [String: String] = ["Kazakhstan": "Astana", "Russia": "Moscow", "China": "Beijing"]
+var dictionary: [String: Int] = ["Январь": 31, "Февраль": 28, "Март": 31, "Май": 31, "Июнь": 30, "Июль": 31, "Августь": 31, "Сентябрь": 30, "Октябрь": 31, "Ноябрь": 30, "Декабрь": 31]
 
+print(dictionary)
 
-for (country, capital) in countryCapital {
-    print("Capital of \(country) is \(capital)")
+dictionary["APRIL"] = 30
+
+print(dictionary)
+
+let oldValue = dictionary.updateValue(29, forKey: "Февраль")
+print(dictionary)
+
+if let value = dictionary["Январь"] {
+    print(value)
 }
 
-var trainings = ["Кардио-тренировки", "Йога", "Силовые тренировки"]
 
-for training in trainings {
-    print(training)
+
+// Задание 2
+
+let shapesArray = ["Circle", "Square", "Triangle"]
+let colorsArray = ["Red", "Green", "Blue"]
+
+var myDictionary: [String: String] = Dictionary(uniqueKeysWithValues: zip(shapesArray, colorsArray))
+print(myDictionary)
+
+let valuesArray = Array(myDictionary.values)
+
+if let value = valuesArray.last {
+    print(value)
 }
 
-// Задание 5
-var balance = 0
-
-balance += 10000
-print(balance)
-
-balance += 20000
-print(balance)
-
-balance /= 2
-print(balance)
-
-balance *= 3
-print(balance)
-
-balance -= 3000
-print(balance)
 
 
+// Задание 3
+
+var dictionary1: [String: Double] = ["Easy": 10.0, "Medium": 8.0, "Fast": 6.0]
+
+dictionary1["Sprint"] = 4.0
+
+print(dictionary1)
+
+dictionary1.updateValue(7.5, forKey: "Medium")
+dictionary1.updateValue(5.8, forKey: "Fast")
+
+print(dictionary1)
+
+dictionary1.removeValue(forKey: "Sprint")
+
+print(dictionary1)
+
+let temp = "Medium"
+
+if dictionary1.keys.contains(temp) {
+    if let value = dictionary1[temp] {
+        print("Хорошо! Я буду поддерживать вас в темпе \(value) минута в милю")
+    }
+}
+
+
+// Задание 4
+
+var studentsDictionary: [String: [String: UInt]] = ["Askarov": ["22.05.2020": 8], "Kaisarov": ["22.05.2020": 10], "Maksimov": ["23.05.2020": 9]]
+print(studentsDictionary)
+
+studentsDictionary.updateValue(["21.05.2020": 10], forKey: "Axmetov")
+print(studentsDictionary)
+
+let nameArray = Array(studentsDictionary.keys)
+
+print(nameArray)
+print(nameArray.count)
