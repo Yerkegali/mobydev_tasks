@@ -22,7 +22,8 @@ if let value = dictionary["Январь"] {
 let shapesArray = ["Circle", "Square", "Triangle"]
 let colorsArray = ["Red", "Green", "Blue"]
 
-var myDictionary: [String: String] = Dictionary(uniqueKeysWithValues: zip(shapesArray, colorsArray))
+//var myDictionary: [String: String] = Dictionary(uniqueKeysWithValues: zip(shapesArray, colorsArray))
+var myDictionary: Dictionary<[String], [String]> = [shapesArray: colorsArray]
 print(myDictionary)
 
 let valuesArray = Array(myDictionary.values)
@@ -62,7 +63,7 @@ if dictionary1.keys.contains(temp) {
 // Задание 4
 
 var studentsDictionary: [String: [String: UInt]] = ["Askarov": ["22.05.2020": 8], "Kaisarov": ["22.05.2020": 10], "Maksimov": ["23.05.2020": 9]]
-print(studentsDictionary)
+print(studentsDictionary) //логика правильная, но нужно по 2 оценки на каждого ученика
 
 studentsDictionary.updateValue(["21.05.2020": 10], forKey: "Axmetov")
 print(studentsDictionary)
@@ -71,18 +72,3 @@ let nameArray = Array(studentsDictionary.keys)
 
 print(nameArray)
 print(nameArray.count)
-
-
-//1.3
-var countryCapital: [String: String] = ["Kazakhstan": "Astana", "Russia": "Moscow", "China": "Beijing"]
-
-
-for (country, capital) in countryCapital {
-    print("Capital of \(country) is \(capital)")
-}
-
-var trainings = ["Кардио-тренировки", "Йога", "Силовые тренировки"]
-
-for training in trainings {
-    print(training)
-}
