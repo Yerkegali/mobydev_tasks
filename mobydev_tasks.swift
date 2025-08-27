@@ -2,12 +2,7 @@
 
 var dictionary: [String: Int] = ["Январь": 31, "Февраль": 28, "Март": 31, "Май": 31, "Июнь": 30, "Июль": 31, "Августь": 31, "Сентябрь": 30, "Октябрь": 31, "Ноябрь": 30, "Декабрь": 31]
 
-print(dictionary)
-
 dictionary["APRIL"] = 30
-
-print(dictionary)
-
 let oldValue = dictionary.updateValue(29, forKey: "Февраль")
 print(dictionary)
 
