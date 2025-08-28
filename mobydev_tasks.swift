@@ -2,7 +2,12 @@
 
 var dictionary: [String: Int] = ["Январь": 31, "Февраль": 28, "Март": 31, "Май": 31, "Июнь": 30, "Июль": 31, "Августь": 31, "Сентябрь": 30, "Октябрь": 31, "Ноябрь": 30, "Декабрь": 31]
 
+print(dictionary)
+
 dictionary["APRIL"] = 30
+
+print(dictionary)
+
 let oldValue = dictionary.updateValue(29, forKey: "Февраль")
 print(dictionary)
 
@@ -17,7 +22,6 @@ if let value = dictionary["Январь"] {
 let shapesArray = ["Circle", "Square", "Triangle"]
 let colorsArray = ["Red", "Green", "Blue"]
 
-//var myDictionary: [String: String] = Dictionary(uniqueKeysWithValues: zip(shapesArray, colorsArray))
 var myDictionary: Dictionary<[String], [String]> = [shapesArray: colorsArray]
 print(myDictionary)
 
@@ -26,7 +30,6 @@ let valuesArray = Array(myDictionary.values)
 if let value = valuesArray.last {
     print(value)
 }
-
 
 
 // Задание 3
@@ -57,10 +60,11 @@ if dictionary1.keys.contains(temp) {
 
 // Задание 4
 
-var studentsDictionary: [String: [String: UInt]] = ["Askarov": ["22.05.2020": 8], "Kaisarov": ["22.05.2020": 10], "Maksimov": ["23.05.2020": 9]]
-print(studentsDictionary) //логика правильная, но нужно по 2 оценки на каждого ученика
+var studentsDictionary: [String: [String: UInt]] = ["Askarov": ["22.05.2020": 8, "23.05.2020": 8], "Kaisarov": ["22.05.2020": 8, "26.05.2020": 7], "Maksimov": ["22.05.2020": 7, "25.05.2020": 6]]
 
-studentsDictionary.updateValue(["21.05.2020": 10], forKey: "Axmetov")
+print(studentsDictionary)
+
+studentsDictionary.updateValue(["22.05.2020": 10, "25.05.2020": 10], forKey: "Axmetov")
 print(studentsDictionary)
 
 let nameArray = Array(studentsDictionary.keys)
