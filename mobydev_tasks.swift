@@ -1,73 +1,83 @@
 // Задание 1
 
-var dictionary: [String: Int] = ["Январь": 31, "Февраль": 28, "Март": 31, "Май": 31, "Июнь": 30, "Июль": 31, "Августь": 31, "Сентябрь": 30, "Октябрь": 31, "Ноябрь": 30, "Декабрь": 31]
-
-print(dictionary)
-
-dictionary["APRIL"] = 30
-
-print(dictionary)
-
-let oldValue = dictionary.updateValue(29, forKey: "Февраль")
-print(dictionary)
-
-if let value = dictionary["Январь"] {
-    print(value)
+struct GPS1 {
+    
+    var latitude1 = 0.0
+    var longitude1 = 0.0
+    
 }
 
+var somePlace1 = GPS1()
+
+print(somePlace1.latitude1)
+print(somePlace1.longitude1)
+
+somePlace1 = GPS1(latitude1: 51.514004, longitude1: 0.125226)
+
+print(somePlace1.latitude1)
+print(somePlace1.longitude1)
 
 
 // Задание 2
 
-let shapesArray = ["Circle", "Square", "Triangle"]
-let colorsArray = ["Red", "Green", "Blue"]
-
-var myDictionary: Dictionary<[String], [String]> = [shapesArray: colorsArray]
-print(myDictionary)
-
-let valuesArray = Array(myDictionary.values)
-
-if let value = valuesArray.last {
-    print(value)
+struct Book {
+    
+    var title = String.init()
+    var author = String.init()
+    var numOfPages = Int.init()
+    var price = Double.init()
+    
 }
+
+//let favoriteBook = Book()
+//
+//print(favoriteBook.title)
+//print(favoriteBook.author)
+//print(favoriteBook.numOfPages)
+//print(favoriteBook.price)
+
+let favoriteBook = Book(
+    title: "Мастер и Медведь",
+    author: "Александр Плеханов",
+    numOfPages: 432,
+    price: 120.0
+)
+
+print(favoriteBook.title)
+print(favoriteBook.author)
+print(favoriteBook.numOfPages)
+print(favoriteBook.price)
 
 
 // Задание 3
 
-var dictionary1: [String: Double] = ["Easy": 10.0, "Medium": 8.0, "Fast": 6.0]
-
-dictionary1["Sprint"] = 4.0
-
-print(dictionary1)
-
-dictionary1.updateValue(7.5, forKey: "Medium")
-dictionary1.updateValue(5.8, forKey: "Fast")
-
-print(dictionary1)
-
-dictionary1.removeValue(forKey: "Sprint")
-
-print(dictionary1)
-
-let temp = "Medium"
-
-if dictionary1.keys.contains(temp) {
-    if let value = dictionary1[temp] {
-        print("Хорошо! Я буду поддерживать вас в темпе \(value) минута в милю")
-    }
+struct RunningWorkout {
+    var distance = Double.init()
+    var time = Double.init()
+    var height = Double.init()
 }
 
+let firstRun = RunningWorkout(
+    distance: 2396,
+    time: 15.3,
+    height: 94
+)
+
+print(firstRun.distance)
+print(firstRun.time)
+print(firstRun.height)
 
 // Задание 4
 
-var studentsDictionary: [String: [String: UInt]] = ["Askarov": ["22.05.2020": 8, "23.05.2020": 8], "Kaisarov": ["22.05.2020": 8, "26.05.2020": 7], "Maksimov": ["22.05.2020": 7, "25.05.2020": 6]]
+struct GPS2 {
+    
+    var latitude2: Double
+    var longitude2: Double
+}
 
-print(studentsDictionary)
+let somePlace = GPS2(latitude2: 51.514004, longitude2: 0.125226)
 
-studentsDictionary.updateValue(["22.05.2020": 10, "25.05.2020": 10], forKey: "Axmetov")
-print(studentsDictionary)
+print(somePlace.latitude2)
+print(somePlace.longitude2)
 
-let nameArray = Array(studentsDictionary.keys)
 
-print(nameArray)
-print(nameArray.count)
