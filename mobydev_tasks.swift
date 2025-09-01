@@ -29,12 +29,12 @@ struct Book {
     
 }
 
-//let favoriteBook = Book()
-//
-//print(favoriteBook.title)
-//print(favoriteBook.author)
-//print(favoriteBook.numOfPages)
-//print(favoriteBook.price)
+let favoriteBook = Book()
+
+print(favoriteBook.title)
+print(favoriteBook.author)
+print(favoriteBook.numOfPages)
+print(favoriteBook.price)
 
 let favoriteBook = Book(
     title: "Мастер и Медведь",
