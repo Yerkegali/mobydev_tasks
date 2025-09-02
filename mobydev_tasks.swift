@@ -126,27 +126,6 @@ print(laptop1)
 print(laptop2)
 
 
-// Задание 7
-
-struct Height {
-    
-    var height: Double
-    
-    init(height: Double) {
-        self.height = height
-    }
-    
-    init(height2: Double) {
-        self.height = height2 * 2.54
-    }
-    
-}
-
-let heightInInches = Height(height: 65)
-let heightInCM = Height(height2: 65)
-
-print(heightInInches.height)
-print(heightInCM.height)
 
 
 
