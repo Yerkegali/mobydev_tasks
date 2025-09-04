@@ -1,21 +1,4 @@
 
-struct GPS1 {
-    
-    var latitude1 = 0.0
-    var longitude1 = 0.0
-    
-}
-
-var somePlace1 = GPS1()
-
-print(somePlace1.latitude1)
-print(somePlace1.longitude1)
-
-somePlace1 = GPS1(latitude1: 51.514004, longitude1: 0.125226)
-
-print(somePlace1.latitude1)
-print(somePlace1.longitude1)
-
 
 // Задание 2
 
