@@ -63,6 +63,8 @@ struct GPS2 {
     
 }
 
+
+
 let somePlace2 = GPS2(latitude2: 51.514004, longitude2: 0.125226)
 
 print(somePlace2.latitude2)
