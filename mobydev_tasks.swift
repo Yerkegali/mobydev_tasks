@@ -31,6 +31,8 @@ print(favoriteBook.numOfPages)
 print(favoriteBook.price)
 
 
+
+
 // Задание 3
 
 struct RunningWorkout {
